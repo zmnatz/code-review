@@ -64,6 +64,10 @@ jobs:
     concurrency:
       group: screenshots-${{ github.event.pull_request.number }}
       cancel-in-progress: true
+    # A container job's steps default to sh, and these use bash.
+    defaults:
+      run:
+        shell: bash
     container:
       # Floating tag: the newest Playwright image, with Chromium and its system libraries.
       image: mcr.microsoft.com/playwright:noble
