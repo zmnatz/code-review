@@ -1,0 +1,16 @@
+{
+  "name": "code-review",
+  "private": true,
+  "type": "module",
+  "description": "Shared PR review tooling: screenshots of a PR's pages, posted as one comment.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "test": "node --test 'screenshots/__tests__/*.test.ts'"
+  },
+  "dependencies": {
+    "js-yaml": "latest",
+    "playwright-core": "latest"
+  }
+}
