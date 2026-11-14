@@ -43,6 +43,10 @@ on:
       bun-version:
         type: string
         default: latest
+      node-version-file:
+        description: A file naming the Node version the site builds with, such as .nvmrc. Without one the job uses Node 24.
+        type: string
+        default: ''
       tool-ref:
         description: The ref of this repo to run the tool from.
         type: string
@@ -83,8 +87,13 @@ jobs:
           bun-version: ${{ inputs.bun-version }}
       # The image's Node is too old to run the TypeScript tooling directly.
       - uses: actions/setup-node@v4
+        if: inputs.node-version-file == ''
         with:
           node-version: 24
+      - uses: actions/setup-node@v4
+        if: inputs.node-version-file != ''
+        with:
+          node-version-file: ${{ inputs.node-version-file }}
       - run: ${{ inputs.install }}
 
       - name: Read the PR description and changed files

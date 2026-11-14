@@ -69,6 +69,7 @@ jobs:
 | `start` | `node_modules/.bin/next start -H 127.0.0.1 -p {port}` | Serves the build. `{port}` is a free port, also in `$PORT`. |
 | `vars` | none | Shell command printing `name=value` lines; each fills `{name}` in a route. |
 | `bun-version` | `latest` | |
+| `node-version-file` | none (Node 24) | A file such as `.nvmrc` naming the Node the site builds with. The tool runs on it too, so it needs Node 22.18 or later. |
 | `tool-ref` | `v1` | Which ref of this repo to run the tool from. |
 
 The site is started inside the job from your checkout, so it needs no deploy and no
