@@ -1,5 +1,7 @@
 name: Clean up PR screenshots
 
+# Deprecated: moved to zmnatz/github-workflows (same file name and inputs). This copy only keeps @v1 working.
+#
 # Reusable workflow: deletes a PR's folder from the orphan `pr-screenshots` branch
 # when the PR closes or merges, so the branch does not grow forever. A PR that never
 # had screenshots (or a repo with no such branch yet) is a no-op.
