@@ -1,5 +1,7 @@
 # code-review
 
+> **Moved to [zmnatz/github-workflows](https://github.com/zmnatz/github-workflows#pr-screenshots).** The PR screenshot workflows and their tool now live there, with the same inputs. Switch `uses: zmnatz/code-review/.github/workflows/<workflow>.yml@v1` to `uses: zmnatz/github-workflows/.github/workflows/<workflow>.yml@v1`. This repository's `v1` keeps working for callers that haven't moved, and gets no more changes.
+
 Shared tooling for reviewing pull requests. At the moment that is one reusable
 workflow: screenshots of a PR's pages, posted as a single comment that updates in place.
 
